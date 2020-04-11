@@ -25,7 +25,7 @@
     "url": "git+https://github.com/justintaddei/npm-ts-template.git"
   },
   "keywords": [],
-  "author": "Justin Taddei",
+  "author": "Justin Taddei <justin@justintaddei.com> (https://justintaddei.com/)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/justintaddei/npm-ts-template/issues"

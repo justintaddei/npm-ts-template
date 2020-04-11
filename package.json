@@ -2,15 +2,16 @@
   "name": "npm-ts-template",
   "version": "0.0.0",
   "description": "A template typescript-based npm packages",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "esnext": "dist/es/index.js",
+  "types": "dist/es/index.d.ts",
   "files": [
     "dist/**/*"
   ],
   "scripts": {
     "test": "exit 0",
-    "build": "tsc",
-    "dev": "tsc -w",
+    "build": "rollup --config",
+    "dev": "npm run build -- --watch",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
@@ -32,6 +33,8 @@
   "homepage": "https://github.com/justintaddei/npm-ts-template#readme",
   "devDependencies": {
     "prettier": "^1.19.1",
+    "rollup": "^2.6.0",
+    "rollup-plugin-typescript2": "^0.27.0",
     "tslint": "^6.0.0",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.8.3"

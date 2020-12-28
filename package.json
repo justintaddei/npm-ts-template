@@ -1,7 +1,7 @@
 {
   "name": "npm-ts-template",
   "version": "0.0.0",
-  "description": "A template typescript-based npm packages",
+  "description": "A template for typescript-based npm packages",
   "main": "dist/cjs/index.js",
   "module": "dist/es/index.js",
   "unpkg": "dist/iife/index.js",

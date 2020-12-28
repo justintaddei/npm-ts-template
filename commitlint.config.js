@@ -3,8 +3,8 @@ module.exports = {
   ignores: [
     (commit) => {
       console.log('commit :>> ', commit)
-      console.log('/^WIP(:s[.\n]+)?$/.test(commit) :>> ', /^WIP(:\s[.\n]+)?$/.test(commit))
-      return /^WIP(:\s[.\n]+)?$/.test(commit)
+      console.log('.test(commit) :>> ', /^WIP(:\s(.|\n)+)?$/.test(commit))
+      return /^WIP(:\s(.|\n)+)?$/.test(commit)
     }
   ]
 }

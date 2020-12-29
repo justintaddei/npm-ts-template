@@ -1,9 +1,9 @@
-name: cd
+name: Tests
 
 on: [push, pull_request]
 
 jobs:
-  commitlint:
+  tests:
     runs-on: ${{ matrix.os }}
 
     strategy:

@@ -11,7 +11,9 @@
   ],
   "scripts": {
     "test": "jest",
-    "test:no-cache": "jest --no-cache",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest ./unit/.*.test.ts",
+    "test:integration": "jest ./integration/.*.test.ts",
     "build": "rollup --config",
     "dev": "npm run build -- --watch",
     "format": "prettier --write \"src/**/*.(t|j)s\"",

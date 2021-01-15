@@ -1,6 +1,8 @@
 /**
- *  Returns "Hello World"
+ *  @returns "Hello World"
  */
-export function helloWorld() {
+function helloWorld() {
   return 'Hello World'
 }
+
+export { helloWorld }

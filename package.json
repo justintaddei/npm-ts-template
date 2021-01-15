@@ -1,5 +1,6 @@
 {
   "name": "npm-ts-template",
+  "private": true,
   "version": "0.0.0",
   "description": "A template for typescript-based npm packages",
   "main": "dist/cjs/index.js",

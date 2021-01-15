@@ -9,6 +9,8 @@ const nonESBuildTSConfig = {
   declaration: false
 }
 
+const external = Object.keys(pkg.peerDependencies ?? {})
+
 export default [
   {
     input: './src/index.ts',
@@ -22,7 +24,7 @@ export default [
         }
       })
     ],
-
+    external,
     output: [
       {
         file: pkg.module,
@@ -39,7 +41,7 @@ export default [
         }
       })
     ],
-
+    external,
     output: [
       {
         file: pkg.main,
@@ -65,7 +67,7 @@ export default [
         mainFields: ['unpkg']
       })
     ],
-
+    external,
     output: [
       {
         file: pkg.unpkg,

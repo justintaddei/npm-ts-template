@@ -44,7 +44,7 @@
     "@commitlint/config-conventional": "^12.0.1",
     "@rollup/plugin-node-resolve": "^11.2.0",
     "@types/jest": "^26.0.22",
-    "husky": "^5.2.0",
+    "husky": "^6.0.0",
     "jest": "^26.6.3",
     "prettier": "^2.2.1",
     "rollup": "^2.51.1",

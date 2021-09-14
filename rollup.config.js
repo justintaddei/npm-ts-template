@@ -3,6 +3,8 @@ import pkg from './package.json'
 import { uglify } from 'rollup-plugin-uglify'
 import resolve from '@rollup/plugin-node-resolve'
 
+const globalIdentifier = 'PkgName'
+
 const nonESBuildTSConfig = {
   target: 'es5',
   removeComments: true,
@@ -72,8 +74,9 @@ export default [
       {
         file: pkg.unpkg,
         format: 'iife',
+        // globals: { pkg: 'name' },
         extend: true,
-        name: 'window'
+        name: `window.${globalIdentifier}`
       }
     ]
   }

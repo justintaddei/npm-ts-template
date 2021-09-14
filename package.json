@@ -19,7 +19,7 @@
     "dev": "npm run build -- --watch",
     "format": "prettier --write \"src/**/*.(t|j)s\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare": "npm run build",
+    "prepare": "npm run build && husky install",
     "prepublishOnly": "npm test && npm run lint",
     "release": "standard-version"
   },
@@ -49,7 +49,7 @@
     "prettier": "^2.4.0",
     "rollup": "^2.54.0",
     "rollup-plugin-typescript2": "^0.30.0",
-    "rollup-plugin-uglify": "^6.0.4",
+    "rollup-plugin-uglify": "^5.0.2",
     "standard-version": "^9.3.1",
     "ts-jest": "^26.5.6",
     "tslint": "^6.1.3",

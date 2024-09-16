@@ -1,36 +1,30 @@
-name: Conventional Commits
+name: Commitlint
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   commitlint:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest]
-        node: [14]
-
+    runs-on: ubuntu-22.04
     steps:
-      - name: Checkout 🛎
-        uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup node env 🏗
-        uses: actions/setup-node@v4.0.2
+      - uses: pnpm/action-setup@v4
         with:
-          node-version: ${{ matrix.node }}
-
-      - name: Cache node_modules 📦
-        uses: actions/cache@v2.1.7
+          version: 9
+      - uses: actions/setup-node@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-      - name: Install dependencies ☁
-        run: npm ci
+          node-version: 20
+          cache: "pnpm"
+      - name: Install commitlint
+        run: |
+          pnpm add conventional-changelog-conventionalcommits
+          pnpm add commitlint@latest
 
-      - name: Lint commit messages 👀
-        run: npx commitlint --from=HEAD~1
+      - name: Validate current commit (last commit) with commitlint
+        if: github.event_name == 'push'
+        run: pnpm exec commitlint --last --verbose
+
+      - name: Validate PR commits with commitlint
+        if: github.event_name == 'pull_request'
+        run: pnpm exec commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose

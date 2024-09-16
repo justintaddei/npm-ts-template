@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "ES2016",
     "module": "es2015",
-    "lib": ["DOM", "es2015"],
+    "lib": ["DOM", "es2016"],
     "removeComments": false,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "declaration": true,
     "outDir": "./dist",
     "strict": true,
     "noImplicitAny": true,
-    "esModuleInterop": true,
-    "baseUrl": "./"
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "exclude": ["node_modules", "nuxt"]
 }

@@ -1,13 +1,3 @@
 # npm-ts-template
 
-![Tests](https://github.com/justintaddei/npm-ts-template/workflows/Tests/badge.svg)
-![Issues](https://img.shields.io/github/issues-raw/justintaddei/npm-ts-template.svg?style=flat)
-![NPM version](https://img.shields.io/npm/v/npm-ts-template.svg?style=flat)
-![Downloads](https://img.shields.io/npm/dt/npm-ts-template.svg?style=flat)
-![License](https://img.shields.io/npm/l/npm-ts-template.svg?style=flat)
-![Language](https://img.shields.io/badge/language-typescript-blue.svg?style=flat)
-
-## Setup
-- [ ] Find and replace all `npm-ts-template` with `[your package name]` excluding `CHANGELOG.md
-- [ ] Set preferred global export in `rollup.config.js`
-- [ ] run `npm i`
+Be sure to fill out the blank fields in `package.json` and add your name in `LICENSE.md`.

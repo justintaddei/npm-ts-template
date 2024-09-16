@@ -1,7 +1,6 @@
-The MIT License (MIT)
-=====================
+# The MIT License (MIT)
 
-Copyright (c) 2021 Justin Taddei
+Copyright (c) 2021 <span style="color: red;font-weight:bold;">[YOUR NAME HERE]</span>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
